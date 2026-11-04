@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mekanismdesignern</title>
+<style>
+:root{
+  --bg:#f5f4f0; --yta:#ffffff; --linje:#dedbd2; --text:#1f2328; --dampad:#5c6168;
+  --accent:#e8892b; --accent-mork:#b8641a; --kit:#3b7dd8; --self:#3f9b5a; --visning:#9aa0a6;
+  --ok:#2f8a4c; --varning:#b7791f; --fel:#c0392b; --info:#3b7dd8;
+  --radie:10px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--text);
+  font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+button,select,input{font:inherit}
+#app{display:grid;grid-template-rows:auto 1fr auto;height:100vh}
+header{display:flex;align-items:center;gap:20px;padding:10px 18px;background:var(--yta);border-bottom:1px solid var(--linje);flex-wrap:wrap}
+header h1{font-size:19px;margin:0;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
+header h1 span{color:var(--accent)}
+.stegrad{display:flex;gap:4px;flex-wrap:wrap}
+.stegknapp{border:1px solid var(--linje);background:var(--bg);border-radius:999px;padding:6px 12px;cursor:pointer;color:var(--dampad);font-size:14px;min-height:36px}
+.stegknapp b{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--linje);color:var(--text);font-size:12px;margin-right:6px}
+.stegknapp.aktiv{border-color:var(--accent);color:var(--text);background:#fff4e9}
+.stegknapp.aktiv b{background:var(--accent);color:#fff}
+.stegknapp.klar b{background:var(--text);color:#fff}
+.stegknapp:disabled{opacity:.45;cursor:not-allowed}
+main{display:grid;grid-template-columns:minmax(320px,380px) 1fr;min-height:0}
+#panel{background:var(--yta);border-right:1px solid var(--linje);display:flex;flex-direction:column;min-height:0}
+#panelInnehall{padding:16px 18px;overflow:auto;flex:1}
+#panel h2{font-size:20px;margin:0 0 4px}
+#panel .ingress{color:var(--dampad);margin:0 0 14px}
+.panelfot{display:flex;justify-content:space-between;gap:8px;padding:12px 18px;border-top:1px solid var(--linje)}
+.knapp{border:1px solid var(--linje);background:var(--yta);border-radius:8px;padding:9px 14px;cursor:pointer;min-height:44px;white-space:nowrap}
+.knapp:hover{border-color:#bbb}
+.knapp.primar{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+.knapp.primar:hover{background:var(--accent-mork)}
+.knapp:disabled{opacity:.45;cursor:not-allowed}
+.kort{display:block;width:100%;text-align:left;border:1.5px solid var(--linje);background:var(--yta);border-radius:var(--radie);padding:12px 14px;margin-bottom:10px;cursor:pointer;position:relative}
+.kort:hover{border-color:#bdb8ab}
+.kort.vald{border-color:var(--accent);box-shadow:0 0 0 3px #e8892b22}
+.kort:disabled{cursor:not-allowed;opacity:.55}
+.kort .rubrik{display:flex;align-items:center;gap:10px;font-weight:650}
+.kort .ikon{font-size:22px;width:30px;text-align:center}
+.kort p{margin:6px 0 0;color:var(--dampad);font-size:14.5px}
+.bricka{display:inline-block;font-size:12px;font-weight:650;border-radius:999px;padding:2px 8px;background:#eee;color:var(--text)}
+.bricka.bra{background:#fff0e0;color:var(--accent-mork)}
+.kort .bricka{position:absolute;top:10px;right:10px}
+.fakta{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.fakta span{font-size:12.5px;background:var(--bg);border-radius:6px;padding:2px 7px;color:var(--dampad)}
+.param{margin-bottom:14px}
+.param label{display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:600;font-size:15px}
+.param .rad{display:flex;gap:10px;align-items:center;margin-top:4px}
+.param input[type=range]{flex:1;accent-color:var(--accent);min-height:28px}
+.param input[type=number]{width:78px;padding:6px;border:1px solid var(--linje);border-radius:6px;text-align:right}
+.param .enhet{color:var(--dampad);font-size:14px;width:22px}
+.infoknapp{border:1px solid var(--linje);background:var(--bg);border-radius:50%;width:26px;height:26px;cursor:pointer;font-size:13px;font-weight:700;color:var(--dampad)}
+.infotext{font-size:14px;color:var(--dampad);background:var(--bg);border-radius:8px;padding:8px 10px;margin-top:6px}
+select{padding:8px;border:1px solid var(--linje);border-radius:8px;background:var(--yta);width:100%;min-height:42px}
+.kontroll{display:flex;gap:8px;align-items:flex-start;padding:8px 10px;border-radius:8px;margin-bottom:6px;font-size:14.5px}
+.kontroll .pr{font-weight:700;min-width:18px}
+.kontroll.ok{background:#e8f4ec}.kontroll.ok .pr{color:var(--ok)}
+.kontroll.varning{background:#fbf2e0}.kontroll.varning .pr{color:var(--varning)}
+.kontroll.fel{background:#fbe6e3}.kontroll.fel .pr{color:var(--fel)}
+.kontroll.info{background:#e7effa}.kontroll.info .pr{color:var(--info)}
+table{border-collapse:collapse;width:100%}
+.berakning td{padding:7px 4px;border-bottom:1px solid var(--linje);vertical-align:top;font-size:14.5px}
+.berakning td.v{text-align:right;font-weight:650;white-space:nowrap}
+.berakning .formel{display:block;color:var(--dampad);font-size:13px;font-family:ui-monospace,Menlo,Consolas,monospace}
+.monteringssteg{list-style:none;padding:0;margin:0}
+.monteringssteg li{border:1.5px solid var(--linje);border-radius:var(--radie);padding:10px 12px;margin-bottom:8px;cursor:pointer}
+.monteringssteg li.aktiv{border-color:var(--accent);background:#fff8f0}
+.monteringssteg li .nr{font-weight:700;color:var(--accent-mork);margin-right:6px}
+.monteringssteg li p{margin:6px 0 0;font-size:14.5px;color:var(--dampad)}
+.chips{display:flex;gap:4px;flex-wrap:wrap;margin-top:6px}
+.chip{font-size:12px;border-radius:999px;padding:1px 8px;color:#fff;font-weight:650}
+#vy{position:relative;min-height:0;overflow:hidden;background:linear-gradient(#fbfaf7,#ecebe5)}
+#vy canvas{display:block}
+.vyverktyg{position:absolute;top:12px;left:12px;right:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;pointer-events:none}
+.vyverktyg > *{pointer-events:auto}
+.segment{display:inline-flex;background:var(--yta);border:1px solid var(--linje);border-radius:9px;padding:3px;box-shadow:0 1px 3px #0001}
+.segment button{border:0;background:transparent;padding:7px 12px;border-radius:7px;cursor:pointer;min-height:38px;color:var(--dampad)}
+.segment button.aktiv{background:var(--text);color:#fff}
+.flytande{background:var(--yta);border:1px solid var(--linje);border-radius:9px;padding:6px 12px;display:flex;align-items:center;gap:10px;box-shadow:0 1px 3px #0001;font-size:14px}
+.flytande input[type=range]{accent-color:var(--accent);width:160px}
+.animverktyg{position:absolute;bottom:12px;left:12px;right:12px;display:flex;justify-content:center;pointer-events:none}
+.animverktyg .flytande{pointer-events:auto;flex-wrap:wrap;justify-content:center}
+.animverktyg button{border:1px solid var(--linje);background:var(--bg);border-radius:7px;min-width:40px;min-height:38px;cursor:pointer}
+.vinkelvisning{font-variant-numeric:tabular-nums;min-width:110px}
+.etikett{font:700 12px system-ui,sans-serif;color:#fff;border-radius:999px;padding:2px 7px;border:2px solid #fff;box-shadow:0 1px 3px #0003;pointer-events:none;white-space:nowrap}
+.legend{position:absolute;right:12px;bottom:70px;background:var(--yta);border:1px solid var(--linje);border-radius:9px;padding:8px 10px;font-size:13px;box-shadow:0 1px 3px #0001}
+.legend div{display:flex;align-items:center;gap:6px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px}
+.stegtext{position:absolute;left:12px;top:64px;max-width:380px;background:var(--yta);border:1px solid var(--linje);border-radius:9px;padding:10px 12px;box-shadow:0 1px 3px #0001;font-size:14.5px}
+.stegtext b{display:block;margin-bottom:4px}
+footer{background:var(--yta);border-top:1px solid var(--linje);max-height:24vh;overflow:auto}
+footer summary{padding:8px 18px;cursor:pointer;font-weight:650;position:sticky;top:0;background:var(--yta)}
+.dellista td,.dellista th{padding:4px 10px;border-bottom:1px solid var(--linje);font-size:14px;text-align:left}
+.dellista th{color:var(--dampad);font-weight:600;font-size:13px}
+.dellista tr{cursor:pointer}
+.dellista tr.markerad td{background:#fff4e9}
+.nrbricka{display:inline-block;color:#fff;border-radius:999px;padding:1px 7px;font-weight:700;font-size:12px}
+.platta-wrap{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.platta-wrap figure{margin:0}
+.platta-wrap figcaption{font-size:13px;color:var(--dampad);text-align:center}
+.platta-wrap canvas{background:var(--bg);border:1px solid var(--linje);border-radius:8px}
+.nedladdning{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.nedladdning .knapp{text-align:left;white-space:normal}
+.liten{font-size:13.5px;color:var(--dampad)}
+.grupp{margin:12px 0}
+.grupp h3{font-size:15px;margin:0 0 6px}
+.dold{display:none !important}
+:focus-visible{outline:3px solid #e8892b88;outline-offset:2px}
+header h1 small{font-size:12px;color:var(--dampad);font-weight:600;margin-left:2px}
+.nivaruta{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:14px;color:var(--dampad)}
+.nivaruta select{width:auto;min-height:38px;padding:4px 8px}
+.nivarad{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.nivakort{border:1.5px solid var(--linje);background:var(--yta);border-radius:var(--radie);padding:8px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:2px;font-size:13px;min-height:44px}
+.nivakort b{font-size:15px}
+.nivakort.vald{border-color:var(--accent);box-shadow:0 0 0 3px #e8892b22;background:#fff8f0}
+.lagevaxel{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:4px 0 14px}
+.lagevaxel button{border:1.5px solid var(--linje);background:var(--bg);border-radius:9px;padding:10px 8px;cursor:pointer;min-height:48px;font-size:14px;text-align:center}
+.lagevaxel button.aktiv{border-color:var(--accent);background:#fff4e9;font-weight:650}
+.param.mal{border-left:3px solid var(--accent);padding-left:8px}
+.param.beraknad .rad output{display:block;width:100%;padding:8px 10px;background:#efeee9;border-radius:7px;font-style:italic;color:#3a3f45}
+.beraknadmarke,.malmarke{font-size:11.5px;font-weight:650;border-radius:999px;padding:1px 7px;margin-left:6px;vertical-align:middle}
+.beraknadmarke{background:#e4e2db;color:var(--dampad)}
+.malmarke{background:#fff0e0;color:var(--accent-mork)}
+.gissa{border:1.5px dashed var(--accent);border-radius:var(--radie);padding:10px 12px;margin:6px 0 14px;background:#fffaf4}
+.gissknappar{display:flex;gap:6px}
+.gissknappar .knapp{flex:1}
+.forslagsruta{background:#fff4e9;border:1px solid #f1cfa8;border-radius:9px;padding:10px 12px;margin-bottom:8px;font-size:14.5px}
+.malsvar{margin:4px 0 14px}
+.malsvar details summary,.avancerat summary,details summary{cursor:pointer;font-weight:600;font-size:14.5px;padding:6px 0}
+.utrakning{margin:4px 0 0;padding-left:20px;font-size:13.5px;color:#3a3f45}
+.utrakning li{margin-bottom:4px}
+.jamfor{font-size:13px;margin-top:4px}
+.jamfor th,.jamfor td{border-bottom:1px solid var(--linje);padding:5px 4px;text-align:left;vertical-align:top}
+.jamfor th{font-size:12.5px}
+.jamfor td.gron{color:var(--ok);font-weight:700}.jamfor td.gul{color:var(--varning);font-weight:700}.jamfor td.rod{color:var(--fel);font-weight:700}
+.avancerat{border:1px solid var(--linje);border-radius:var(--radie);padding:4px 12px 10px;margin:10px 0}
+.kryss{display:flex;align-items:center;gap:8px;font-size:14.5px;margin:6px 0 12px;min-height:36px}
+.kryss input{width:20px;height:20px;accent-color:var(--accent)}
+.egenplatta{display:flex;gap:6px;margin-top:6px;align-items:center;flex-wrap:wrap}
+.egenplatta input{width:80px;padding:6px;border:1px solid var(--linje);border-radius:6px}
+textarea{width:100%;font:inherit;border:1px solid var(--linje);border-radius:8px;padding:8px;resize:vertical}
+.mattetikett{font:600 12px system-ui,sans-serif;color:#8a4d14;background:#fffaf4;border:1px solid #f1cfa8;border-radius:6px;padding:1px 6px;pointer-events:none;white-space:nowrap}
+#meddelande{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:20;max-width:90vw;box-shadow:0 2px 8px #0003}
+/* Surfplatta */
+@media (max-width:1024px){
+  main{grid-template-columns:minmax(290px,330px) 1fr}
+  header{gap:10px;padding:8px 12px}
+  .stegknapp{padding:6px 9px}
+  .legend{display:none}
+  .stegtext{top:auto;bottom:70px;left:8px;right:8px;max-width:none;max-height:40%;overflow:auto}
+  .panelfot{padding:10px 12px;gap:6px}
+  .panelfot .knapp{padding:8px 10px}
+  .angratext{display:none}
+}
+@media (max-width:1024px) and (min-width:600px){
+  .stegknapp .stegnamn{display:none}
+  .stegknapp.aktiv .stegnamn{display:inline}
+}
+/* Mobil */
+@media (max-width:599px){
+  html,body{height:auto}
+  #app{display:block;height:auto}
+  header{position:sticky;top:0;z-index:10;padding:6px 10px;gap:6px}
+  header h1{font-size:16px}
+  .stegrad{order:3;width:100%;flex-wrap:nowrap;overflow-x:auto}
+  .stegknapp{padding:4px 8px;min-height:34px;flex:0 0 auto}
+  .stegknapp .stegnamn{display:none}
+  .stegknapp.aktiv .stegnamn{display:inline}
+  main{display:flex;flex-direction:column}
+  #panel{order:2}
+  #vy{order:1;position:sticky;top:88px;z-index:5;height:38vh;min-height:240px;border-bottom:1px solid var(--linje)}
+  #panel{border-right:0}
+  #panelInnehall{overflow:visible;padding:14px}
+  .panelfot{position:sticky;bottom:0;background:var(--yta);z-index:6}
+  .panelfot .knapp{padding:8px 10px}
+  .vyverktyg{top:6px;left:6px;right:6px;gap:6px}
+  .vyverktyg .flytande{padding:4px 8px;font-size:13px}
+  .vyverktyg .flytande input[type=range]{width:100px}
+  .segment button{padding:5px 8px;min-height:34px;font-size:13px}
+  .stegtext{top:auto;bottom:8px;left:6px;right:6px;max-width:none;font-size:13.5px;max-height:40%;overflow:auto}
+  .animverktyg{bottom:6px;left:6px;right:6px}
+  .animverktyg input[type=range]{width:90px}
+  .vinkelvisning{min-width:70px}
+  footer{max-height:none}
+  .katcell,.mattcell{display:none}
+  .nivarad{grid-template-columns:1fr}
+  #aterstall{display:none}
+}
+
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>Mekanism<span>designern</span> <small>2.0</small></h1>
+    <nav class="stegrad" id="stegrad" aria-label="Steg"></nav>
+    <label class="nivaruta">Nivå <select id="nivaVal" aria-label="Nivå"></select></label>
+  </header>
+  <main>
+    <aside id="panel">
+      <div id="panelInnehall"></div>
+      <div class="panelfot">
+        <button class="knapp" id="tillbaka">← Tillbaka</button>
+        <button class="knapp" id="angra" title="Ångra (Ctrl+Z)" aria-label="Ångra">↶<span class="angratext"> Ångra</span></button>
+        <button class="knapp primar" id="nasta">Nästa →</button>
+      </div>
+    </aside>
+    <section id="vy" aria-label="3D-vy">
+      <div class="vyverktyg">
+        <div class="segment" role="group" aria-label="Vy">
+          <button data-vy="monterad" class="aktiv">Monterad</button>
+          <button data-vy="sprangd">Sprängd</button>
+          <button data-vy="steg">Steg för steg</button>
+        </div>
+        <div class="flytande dold" id="sprangReglage">
+          <label for="sprang">Särade delar</label>
+          <input id="sprang" type="range" min="0" max="100" value="100">
+          <span id="sprangVarde">100 %</span>
+        </div>
+        <div class="flytande dold" id="stegNav">
+          <button class="knapp" id="stegForra" aria-label="Föregående steg">←</button>
+          <span id="stegNr">Steg 1</span>
+          <button class="knapp" id="stegNasta" aria-label="Nästa steg">→</button>
+        </div>
+        <div class="flytande">
+          <label><input type="checkbox" id="visaNr" checked> Delnummer</label>
+          <button class="knapp" id="aterstall" style="min-height:32px;padding:4px 10px">Återställ vy</button>
+        </div>
+      </div>
+      <div class="stegtext dold" id="stegtext"></div>
+      <div class="legend" id="legend"></div>
+      <div class="animverktyg" id="animverktyg">
+        <div class="flytande">
+          <button id="spela" aria-label="Spela/pausa">⏸</button>
+          <button id="stegaBak" aria-label="Stega bakåt">⏮</button>
+          <button id="stegaFram" aria-label="Stega framåt">⏭</button>
+          <input type="range" id="tid" min="0" max="1000" value="0" aria-label="Servots vinkel">
+          <span class="vinkelvisning" id="vinkel">Servo 0°</span>
+          <select id="fart" aria-label="Hastighet" style="width:auto;min-height:36px">
+            <option value="0.25">0,25×</option><option value="0.5" selected>0,5×</option><option value="1">1×</option>
+          </select>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <details id="dellistaDetaljer" open>
+      <summary id="dellistaRubrik">Dellista</summary>
+      <table class="dellista"><thead><tr><th>Nr</th><th>Del</th><th class="katcell">Kategori</th><th>Antal</th><th class="mattcell">Mått</th></tr></thead><tbody id="dellista"></tbody></table>
+    </details>
+  </footer>
+</div>
+<!--APP-->
+</body>
+</html>

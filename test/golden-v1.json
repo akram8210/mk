@@ -1,0 +1,590 @@
+[
+ {
+  "design": {
+   "uppgift": "lucka",
+   "mekanism": "servoarm",
+   "servo": "SG90",
+   "Lh": 80,
+   "Wh": 80,
+   "b": 25,
+   "vinkel": 90,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "feb17508e7a531213e4e989c73819ab2e98f01a44093c7f6af4896e590c1315e",
+   "D05_servoarm_x1.stl": "b4c4607684db45fa583eafb7889a10c4b84442c2004da221b5641e8820c100b8",
+   "D08_luckfaste_x1.stl": "0219305ad615c9279195c5e41b21e14bbedb491df404fc0ac980a439138e19a8"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "lucka",
+   "mekanism": "servoarm",
+   "servo": "MG90S",
+   "Lh": 80,
+   "Wh": 80,
+   "b": 25,
+   "vinkel": 90,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "26fdb8bfdba1742b0933b24f42c2930b9cec9b008353d41c5be7aa25828d8ae3",
+   "D05_servoarm_x1.stl": "b4c4607684db45fa583eafb7889a10c4b84442c2004da221b5641e8820c100b8",
+   "D08_luckfaste_x1.stl": "0219305ad615c9279195c5e41b21e14bbedb491df404fc0ac980a439138e19a8"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "lucka",
+   "mekanism": "servoarm",
+   "servo": "SG90",
+   "Lh": 80,
+   "Wh": 80,
+   "b": 25,
+   "vinkel": 90,
+   "massa": 30,
+   "spel": 0.5
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "fc2c585a4922012aca34d9091e5963b29c75973b39ec9b0891f9b8daf1837748",
+   "D05_servoarm_x1.stl": "61d88e2f5f279dff4f281a2403cda8de9941612fbd954dde6de88908d5a9a576",
+   "D08_luckfaste_x1.stl": "f7e610efad41c665d7de14abc9309ae16f597a620282bcd6c7c739383b85caca"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "lucka",
+   "mekanism": "servoarm",
+   "servo": "SG90",
+   "Lh": 200,
+   "Wh": 80,
+   "b": 25,
+   "vinkel": 90,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "feb17508e7a531213e4e989c73819ab2e98f01a44093c7f6af4896e590c1315e",
+   "D05_servoarm_x1.stl": "b4c4607684db45fa583eafb7889a10c4b84442c2004da221b5641e8820c100b8",
+   "D08_luckfaste_x1.stl": "0219305ad615c9279195c5e41b21e14bbedb491df404fc0ac980a439138e19a8"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "lucka",
+   "mekanism": "servoarm",
+   "servo": "SG90",
+   "Lh": 80,
+   "Wh": 200,
+   "b": 25,
+   "vinkel": 90,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "feb17508e7a531213e4e989c73819ab2e98f01a44093c7f6af4896e590c1315e",
+   "D05_servoarm_x1.stl": "b4c4607684db45fa583eafb7889a10c4b84442c2004da221b5641e8820c100b8",
+   "D08_luckfaste_x1.stl": "0219305ad615c9279195c5e41b21e14bbedb491df404fc0ac980a439138e19a8"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "lucka",
+   "mekanism": "servoarm",
+   "servo": "SG90",
+   "Lh": 80,
+   "Wh": 80,
+   "b": 60,
+   "vinkel": 90,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "feb17508e7a531213e4e989c73819ab2e98f01a44093c7f6af4896e590c1315e",
+   "D05_servoarm_x1.stl": "0921c34fc0484bf40ecf6f737d8e445631b8d6b5848f738f76739d800014301f",
+   "D08_luckfaste_x1.stl": "b504fbe0a0abd6b62ca2e463a242ba5abeb77e5c3e68867fdf0954919bc6b6af"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "lucka",
+   "mekanism": "hävarm",
+   "servo": "SG90",
+   "Lh": 80,
+   "Wh": 80,
+   "a": 14,
+   "b": 22,
+   "L": 40,
+   "vinkel": 120,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "68376709a0b7d9d3e8ce6b3691e16384c335244bf490ef9ca17c39a856f956be",
+   "D05_servoarm_vev_x1.stl": "a6847049d7217f5cf50a881b6256ac5c6893d2356cc5dd8b8fa35f6fec6e33f3",
+   "D06_lankstang_x1.stl": "5937547ccdda358f1cece38fb4f558fd0cf165e7f713d998356f026b4de5c0d4",
+   "D10_havarm_luckfaste_x1.stl": "0d211e5a23ea592bdf71d9a780b8bc02a0954a49967cbbe03ac88302596a7e74"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "lucka",
+   "mekanism": "hävarm",
+   "servo": "MG90S",
+   "Lh": 80,
+   "Wh": 80,
+   "a": 14,
+   "b": 22,
+   "L": 40,
+   "vinkel": 120,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "41df9b1e649825788208d7e6cb796892bc44084b544be398d6a14520e9819b41",
+   "D05_servoarm_vev_x1.stl": "a6847049d7217f5cf50a881b6256ac5c6893d2356cc5dd8b8fa35f6fec6e33f3",
+   "D06_lankstang_x1.stl": "5937547ccdda358f1cece38fb4f558fd0cf165e7f713d998356f026b4de5c0d4",
+   "D10_havarm_luckfaste_x1.stl": "0d211e5a23ea592bdf71d9a780b8bc02a0954a49967cbbe03ac88302596a7e74"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "lucka",
+   "mekanism": "hävarm",
+   "servo": "SG90",
+   "Lh": 80,
+   "Wh": 80,
+   "a": 14,
+   "b": 22,
+   "L": 40,
+   "vinkel": 120,
+   "massa": 30,
+   "spel": 0.5
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "117a77d5fe1c61afead5710096d6f6cd63b20cc58e5b6d070173e2d829b9ef51",
+   "D05_servoarm_vev_x1.stl": "9e1ecdc56db8547f4e6fd28d771aaa0d7524e31eed0b2e19190b7caed993c5ff",
+   "D06_lankstang_x1.stl": "46d4585d66ca33eb7ed11b1f8e4cd0d88fa9897f5c3f7253622246485dba08b6",
+   "D10_havarm_luckfaste_x1.stl": "19a1a85a1a38added2a316c2f4838b44ca980083323da17c9b5ab955cf0a31c5"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "lucka",
+   "mekanism": "hävarm",
+   "servo": "SG90",
+   "Lh": 200,
+   "Wh": 80,
+   "a": 14,
+   "b": 22,
+   "L": 40,
+   "vinkel": 120,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "68376709a0b7d9d3e8ce6b3691e16384c335244bf490ef9ca17c39a856f956be",
+   "D05_servoarm_vev_x1.stl": "a6847049d7217f5cf50a881b6256ac5c6893d2356cc5dd8b8fa35f6fec6e33f3",
+   "D06_lankstang_x1.stl": "5937547ccdda358f1cece38fb4f558fd0cf165e7f713d998356f026b4de5c0d4",
+   "D10_havarm_luckfaste_x1.stl": "0d211e5a23ea592bdf71d9a780b8bc02a0954a49967cbbe03ac88302596a7e74"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "lucka",
+   "mekanism": "hävarm",
+   "servo": "SG90",
+   "Lh": 80,
+   "Wh": 200,
+   "a": 14,
+   "b": 22,
+   "L": 40,
+   "vinkel": 120,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "68376709a0b7d9d3e8ce6b3691e16384c335244bf490ef9ca17c39a856f956be",
+   "D05_servoarm_vev_x1.stl": "a6847049d7217f5cf50a881b6256ac5c6893d2356cc5dd8b8fa35f6fec6e33f3",
+   "D06_lankstang_x1.stl": "5937547ccdda358f1cece38fb4f558fd0cf165e7f713d998356f026b4de5c0d4",
+   "D10_havarm_luckfaste_x1.stl": "0d211e5a23ea592bdf71d9a780b8bc02a0954a49967cbbe03ac88302596a7e74"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "lucka",
+   "mekanism": "hävarm",
+   "servo": "SG90",
+   "Lh": 80,
+   "Wh": 80,
+   "a": 30,
+   "b": 22,
+   "L": 40,
+   "vinkel": 120,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "2212c0259c977256837373310909f6b169ab2d74431a7f32e023a01971902d78",
+   "D05_servoarm_vev_x1.stl": "e0dab7d7729d4f282fbfb143e06ca67920d4fa0542d75ae6d9cd0fa30221140c",
+   "D06_lankstang_x1.stl": "5937547ccdda358f1cece38fb4f558fd0cf165e7f713d998356f026b4de5c0d4",
+   "D10_havarm_luckfaste_x1.stl": "0d211e5a23ea592bdf71d9a780b8bc02a0954a49967cbbe03ac88302596a7e74"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "dorr",
+   "mekanism": "hävarm",
+   "servo": "SG90",
+   "Lh": 80,
+   "Wh": 80,
+   "a": 14,
+   "b": 22,
+   "L": 40,
+   "vinkel": 120,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "68376709a0b7d9d3e8ce6b3691e16384c335244bf490ef9ca17c39a856f956be",
+   "D05_servoarm_vev_x1.stl": "a6847049d7217f5cf50a881b6256ac5c6893d2356cc5dd8b8fa35f6fec6e33f3",
+   "D06_lankstang_x1.stl": "5937547ccdda358f1cece38fb4f558fd0cf165e7f713d998356f026b4de5c0d4",
+   "D10_havarm_luckfaste_x1.stl": "0d211e5a23ea592bdf71d9a780b8bc02a0954a49967cbbe03ac88302596a7e74"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "dorr",
+   "mekanism": "hävarm",
+   "servo": "MG90S",
+   "Lh": 80,
+   "Wh": 80,
+   "a": 14,
+   "b": 22,
+   "L": 40,
+   "vinkel": 120,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "41df9b1e649825788208d7e6cb796892bc44084b544be398d6a14520e9819b41",
+   "D05_servoarm_vev_x1.stl": "a6847049d7217f5cf50a881b6256ac5c6893d2356cc5dd8b8fa35f6fec6e33f3",
+   "D06_lankstang_x1.stl": "5937547ccdda358f1cece38fb4f558fd0cf165e7f713d998356f026b4de5c0d4",
+   "D10_havarm_luckfaste_x1.stl": "0d211e5a23ea592bdf71d9a780b8bc02a0954a49967cbbe03ac88302596a7e74"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "dorr",
+   "mekanism": "hävarm",
+   "servo": "SG90",
+   "Lh": 80,
+   "Wh": 80,
+   "a": 14,
+   "b": 22,
+   "L": 40,
+   "vinkel": 120,
+   "massa": 30,
+   "spel": 0.5
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "117a77d5fe1c61afead5710096d6f6cd63b20cc58e5b6d070173e2d829b9ef51",
+   "D05_servoarm_vev_x1.stl": "9e1ecdc56db8547f4e6fd28d771aaa0d7524e31eed0b2e19190b7caed993c5ff",
+   "D06_lankstang_x1.stl": "46d4585d66ca33eb7ed11b1f8e4cd0d88fa9897f5c3f7253622246485dba08b6",
+   "D10_havarm_luckfaste_x1.stl": "19a1a85a1a38added2a316c2f4838b44ca980083323da17c9b5ab955cf0a31c5"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "dorr",
+   "mekanism": "hävarm",
+   "servo": "SG90",
+   "Lh": 200,
+   "Wh": 80,
+   "a": 14,
+   "b": 22,
+   "L": 40,
+   "vinkel": 120,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "68376709a0b7d9d3e8ce6b3691e16384c335244bf490ef9ca17c39a856f956be",
+   "D05_servoarm_vev_x1.stl": "a6847049d7217f5cf50a881b6256ac5c6893d2356cc5dd8b8fa35f6fec6e33f3",
+   "D06_lankstang_x1.stl": "5937547ccdda358f1cece38fb4f558fd0cf165e7f713d998356f026b4de5c0d4",
+   "D10_havarm_luckfaste_x1.stl": "0d211e5a23ea592bdf71d9a780b8bc02a0954a49967cbbe03ac88302596a7e74"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "dorr",
+   "mekanism": "hävarm",
+   "servo": "SG90",
+   "Lh": 80,
+   "Wh": 200,
+   "a": 14,
+   "b": 22,
+   "L": 40,
+   "vinkel": 120,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "68376709a0b7d9d3e8ce6b3691e16384c335244bf490ef9ca17c39a856f956be",
+   "D05_servoarm_vev_x1.stl": "a6847049d7217f5cf50a881b6256ac5c6893d2356cc5dd8b8fa35f6fec6e33f3",
+   "D06_lankstang_x1.stl": "5937547ccdda358f1cece38fb4f558fd0cf165e7f713d998356f026b4de5c0d4",
+   "D10_havarm_luckfaste_x1.stl": "0d211e5a23ea592bdf71d9a780b8bc02a0954a49967cbbe03ac88302596a7e74"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "dorr",
+   "mekanism": "hävarm",
+   "servo": "SG90",
+   "Lh": 80,
+   "Wh": 80,
+   "a": 30,
+   "b": 22,
+   "L": 40,
+   "vinkel": 120,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_servofaste_x1.stl": "2212c0259c977256837373310909f6b169ab2d74431a7f32e023a01971902d78",
+   "D05_servoarm_vev_x1.stl": "e0dab7d7729d4f282fbfb143e06ca67920d4fa0542d75ae6d9cd0fa30221140c",
+   "D06_lankstang_x1.stl": "5937547ccdda358f1cece38fb4f558fd0cf165e7f713d998356f026b4de5c0d4",
+   "D10_havarm_luckfaste_x1.stl": "0d211e5a23ea592bdf71d9a780b8bc02a0954a49967cbbe03ac88302596a7e74"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "skjut",
+   "mekanism": "kuggstång",
+   "servo": "SG90",
+   "m": 1.5,
+   "z": 20,
+   "vinkel": 160,
+   "Wd": 40,
+   "Hd": 70,
+   "massa": 40,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_kuggstangshallare_med_styrskena_x1.stl": "2fa8f04ae2af4b63149dfd01d3505410a0baabc23941997b76f0163274b6b8f8",
+   "D05_drev_kugghjul_x1.stl": "18b1194f2d054777e78e4e50b0d362c131d8c3b6c18e49b9069175a4d47809f0",
+   "D06_kuggstang_x1.stl": "b4334238062dd380be2916bf6db0cdd3b13576116bfac7af6709c9e10620313b"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "skjut",
+   "mekanism": "kuggstång",
+   "servo": "MG90S",
+   "m": 1.5,
+   "z": 20,
+   "vinkel": 160,
+   "Wd": 40,
+   "Hd": 70,
+   "massa": 40,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_kuggstangshallare_med_styrskena_x1.stl": "38873f8ba2b2dcf36e2165f3e9cc77b80fe9bc9c4812e45de229faeebf3722b5",
+   "D05_drev_kugghjul_x1.stl": "18b1194f2d054777e78e4e50b0d362c131d8c3b6c18e49b9069175a4d47809f0",
+   "D06_kuggstang_x1.stl": "b4334238062dd380be2916bf6db0cdd3b13576116bfac7af6709c9e10620313b"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "skjut",
+   "mekanism": "kuggstång",
+   "servo": "SG90",
+   "m": 1.5,
+   "z": 20,
+   "vinkel": 160,
+   "Wd": 40,
+   "Hd": 70,
+   "massa": 40,
+   "spel": 0.5
+  },
+  "filer": {
+   "D01_kuggstangshallare_med_styrskena_x1.stl": "3d79f5bd9562e9b565b4460a6357c38cdf814de9b97cc53328a3613126a47a75",
+   "D05_drev_kugghjul_x1.stl": "6ce35d687ddb8f61015624a0543ec19203d8860cba42caa9d36aba3e2283ec08",
+   "D06_kuggstang_x1.stl": "b4334238062dd380be2916bf6db0cdd3b13576116bfac7af6709c9e10620313b"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "skjut",
+   "mekanism": "kuggstång",
+   "servo": "SG90",
+   "m": 1.5,
+   "z": 20,
+   "vinkel": 160,
+   "Wd": 40,
+   "Hd": 70,
+   "massa": 40,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_kuggstangshallare_med_styrskena_x1.stl": "2fa8f04ae2af4b63149dfd01d3505410a0baabc23941997b76f0163274b6b8f8",
+   "D05_drev_kugghjul_x1.stl": "18b1194f2d054777e78e4e50b0d362c131d8c3b6c18e49b9069175a4d47809f0",
+   "D06_kuggstang_x1.stl": "b4334238062dd380be2916bf6db0cdd3b13576116bfac7af6709c9e10620313b"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "skjut",
+   "mekanism": "kuggstång",
+   "servo": "SG90",
+   "m": 1.5,
+   "z": 30,
+   "vinkel": 160,
+   "Wd": 40,
+   "Hd": 70,
+   "massa": 40,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_kuggstangshallare_med_styrskena_x1.stl": "02179a5d5a87b5ce72246d283583ea33db6146881ed7ff0d2431085f99f23691",
+   "D05_drev_kugghjul_x1.stl": "d13234b28b248931a782bea69053292f74d0fc5740c7b1ac222b715f9dda3dc1",
+   "D06_kuggstang_x1.stl": "1dd54e7c4c56f4f9c9f0e428a65dc359ebd75c42170e1490680a0a378b474b69"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "skjut",
+   "mekanism": "kuggstång",
+   "servo": "SG90",
+   "m": 1.5,
+   "z": 20,
+   "vinkel": 160,
+   "Wd": 40,
+   "Hd": 70,
+   "massa": 40,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_kuggstangshallare_med_styrskena_x1.stl": "2fa8f04ae2af4b63149dfd01d3505410a0baabc23941997b76f0163274b6b8f8",
+   "D05_drev_kugghjul_x1.stl": "18b1194f2d054777e78e4e50b0d362c131d8c3b6c18e49b9069175a4d47809f0",
+   "D06_kuggstang_x1.stl": "b4334238062dd380be2916bf6db0cdd3b13576116bfac7af6709c9e10620313b"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "hiss",
+   "mekanism": "kuggstång",
+   "servo": "SG90",
+   "m": 1.5,
+   "z": 20,
+   "vinkel": 160,
+   "Wd": 50,
+   "Hd": 50,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_kuggstangshallare_med_styrskena_x1.stl": "2fa8f04ae2af4b63149dfd01d3505410a0baabc23941997b76f0163274b6b8f8",
+   "D05_drev_kugghjul_x1.stl": "18b1194f2d054777e78e4e50b0d362c131d8c3b6c18e49b9069175a4d47809f0",
+   "D06_kuggstang_x1.stl": "b4334238062dd380be2916bf6db0cdd3b13576116bfac7af6709c9e10620313b"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "hiss",
+   "mekanism": "kuggstång",
+   "servo": "MG90S",
+   "m": 1.5,
+   "z": 20,
+   "vinkel": 160,
+   "Wd": 50,
+   "Hd": 50,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_kuggstangshallare_med_styrskena_x1.stl": "38873f8ba2b2dcf36e2165f3e9cc77b80fe9bc9c4812e45de229faeebf3722b5",
+   "D05_drev_kugghjul_x1.stl": "18b1194f2d054777e78e4e50b0d362c131d8c3b6c18e49b9069175a4d47809f0",
+   "D06_kuggstang_x1.stl": "b4334238062dd380be2916bf6db0cdd3b13576116bfac7af6709c9e10620313b"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "hiss",
+   "mekanism": "kuggstång",
+   "servo": "SG90",
+   "m": 1.5,
+   "z": 20,
+   "vinkel": 160,
+   "Wd": 50,
+   "Hd": 50,
+   "massa": 30,
+   "spel": 0.5
+  },
+  "filer": {
+   "D01_kuggstangshallare_med_styrskena_x1.stl": "3d79f5bd9562e9b565b4460a6357c38cdf814de9b97cc53328a3613126a47a75",
+   "D05_drev_kugghjul_x1.stl": "6ce35d687ddb8f61015624a0543ec19203d8860cba42caa9d36aba3e2283ec08",
+   "D06_kuggstang_x1.stl": "b4334238062dd380be2916bf6db0cdd3b13576116bfac7af6709c9e10620313b"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "hiss",
+   "mekanism": "kuggstång",
+   "servo": "SG90",
+   "m": 1.5,
+   "z": 20,
+   "vinkel": 160,
+   "Wd": 50,
+   "Hd": 50,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_kuggstangshallare_med_styrskena_x1.stl": "2fa8f04ae2af4b63149dfd01d3505410a0baabc23941997b76f0163274b6b8f8",
+   "D05_drev_kugghjul_x1.stl": "18b1194f2d054777e78e4e50b0d362c131d8c3b6c18e49b9069175a4d47809f0",
+   "D06_kuggstang_x1.stl": "b4334238062dd380be2916bf6db0cdd3b13576116bfac7af6709c9e10620313b"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "hiss",
+   "mekanism": "kuggstång",
+   "servo": "SG90",
+   "m": 1.5,
+   "z": 30,
+   "vinkel": 160,
+   "Wd": 50,
+   "Hd": 50,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_kuggstangshallare_med_styrskena_x1.stl": "02179a5d5a87b5ce72246d283583ea33db6146881ed7ff0d2431085f99f23691",
+   "D05_drev_kugghjul_x1.stl": "d13234b28b248931a782bea69053292f74d0fc5740c7b1ac222b715f9dda3dc1",
+   "D06_kuggstang_x1.stl": "1dd54e7c4c56f4f9c9f0e428a65dc359ebd75c42170e1490680a0a378b474b69"
+  }
+ },
+ {
+  "design": {
+   "uppgift": "hiss",
+   "mekanism": "kuggstång",
+   "servo": "SG90",
+   "m": 1.5,
+   "z": 20,
+   "vinkel": 160,
+   "Wd": 50,
+   "Hd": 50,
+   "massa": 30,
+   "spel": 0.3
+  },
+  "filer": {
+   "D01_kuggstangshallare_med_styrskena_x1.stl": "2fa8f04ae2af4b63149dfd01d3505410a0baabc23941997b76f0163274b6b8f8",
+   "D05_drev_kugghjul_x1.stl": "18b1194f2d054777e78e4e50b0d362c131d8c3b6c18e49b9069175a4d47809f0",
+   "D06_kuggstang_x1.stl": "b4334238062dd380be2916bf6db0cdd3b13576116bfac7af6709c9e10620313b"
+  }
+ }
+]
